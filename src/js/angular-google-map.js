@@ -75,6 +75,10 @@
             var mapArrays = ['roadmap', 'satellite', 'hybrid', 'terrain', 'styled_map'];
             var map;
 
+						// Add Marker var
+						var marker;
+						var position = { lat: lat, lng: long };
+
             map = new google.maps.Map(document.getElementById($scope.templateId), {
                 center: {
                     lat: lat,
@@ -106,6 +110,12 @@
                     position: google.maps.ControlPosition[fullscreenControlOptions]
                 }
             });
+
+						// Add map pin
+						marker = new google.maps.Marker({
+							position: position,
+							map: map
+						});
 
             if($scope.customMapStyles && Array.isArray($scope.customMapStyles)){
                 var styledMapType = new google.maps.StyledMapType($scope.customMapStyles, {name: customMapName});
