@@ -29,15 +29,15 @@ The directive is now available to your app and can be used in your HTML.
 ### HTML
 To include the directive, use the following markup:
 ```
-<google-maps
+<google-map
     lat="51.507351"
     lng="-0.127758"
     apikey="YOUR-API-KEY-HERE"
-</google-maps>
+</google-map>
 ```
 
 ### Options
-The Angular Google Maps directive works supports the majority of the style attributes that the native API supports. The only required properties are ```lat```, ```long``` and ```zoom``` the others are optional. The following is a list of the supported attributes, which can all be added as attributes to the ```<google-maps></google-maps>```
+The Angular Google Maps directive works supports the majority of the style attributes that the native API supports. The only required properties are ```lat```, ```long``` and ```zoom``` the others are optional. The following is a list of the supported attributes, which can all be added as attributes to the ```<google-map></google-map>```
 
 Attribute | Type | Required | Default | Description
 --- | --- | --- | --- | ---
