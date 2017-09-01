@@ -1,3 +1,6 @@
+# Update (2017)
+Custom fork of this project to fix the directive name and add Google Marker icons to map
+
 # Angular Google Map
 > An angular directive to display a custom google map
 
