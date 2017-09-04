@@ -1,9 +1,9 @@
 {
-    "name": "angular-google-map",
+    "name": "angular-google-map-v2",
     "description": "A angular directive for loading a google map",
-    "version": "0.0.2",
-    "author": "Gary Stevens",
-    "repository": "garystevens/angular-google-map",
+    "version": "0.0.3",
+    "authors": "Gary Stevens, Cian Gallagher",
+    "repository": "Cian911/angular-google-map",
     "license": "MIT",
     "engines": {
         "node": ">=2.0"

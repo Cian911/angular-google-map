@@ -20,13 +20,17 @@
         };
 
         function loadMapAPI(){
-            if(loadGoogleMapAPIService.APIKEY !== null && loadGoogleMapAPIService.scriptTagAdded === false && loadGoogleMapAPIService.ready === false){
-                var script = $document[0].createElement('script');
+					console.log('Map Loaded');
+            if(loadGoogleMapAPIService.APIKEY !== null){
+							if(loadGoogleMapAPIService.scriptTagAdded === false) {
+								var script = $document[0].createElement('script');
                 script.type = 'text/javascript';
                 script.async = true;
                 script.src = 'https://maps.googleapis.com/maps/api/js?key=' + loadGoogleMapAPIService.APIKEY + '&callback=mapready';
                 $document[0].getElementsByTagName('head')[0].appendChild(script);
-                loadGoogleMapAPIService.scriptTagAdded = true;
+							}
+
+              loadGoogleMapAPIService.scriptTagAdded = true;
             } else if(loadGoogleMapAPIService.APIKEY === null){
                 console.log('Cannot load maps due to no API KEY being provided');
             }
@@ -50,7 +54,7 @@
 
         function createMap($scope){
             var lat = parseFloat($scope.lat) || 0;
-            var long = parseFloat($scope.long) || 0;
+            var lng = parseFloat($scope.lng) || 0;
             var zoom = parseInt($scope.zoom) || 8;
             var mapType = ($scope.mapType !== undefined ? ($scope.mapType).toUpperCase() : "ROADMAP");
             var customMapName = ($scope.customMapName === undefined ? "Custom Map" : $scope.customMapName);
@@ -77,12 +81,12 @@
 
 						// Add Marker var
 						var marker;
-						var position = { lat: lat, lng: long };
+						var position = { lat: lat, lng: lng };
 
             map = new google.maps.Map(document.getElementById($scope.templateId), {
                 center: {
                     lat: lat,
-                    lng: long
+                    lng: lng
                 },
                 clickableIcons: clickableIcons,
                 disableDoubleClickZoom: disableDoubleClickZoom,
@@ -141,7 +145,7 @@
                 mapTypeControlOptionsPosition: '=',
                 mapTypeControlOptionsStyle: '=',
                 lat: '=',
-                long: '=',
+                lng: '=',
                 scrollwheel: '=',
                 streetViewControl: '=',
                 streetViewControlOptions: '=',
@@ -166,9 +170,12 @@
                             return $scope.googlemap.ready;
                         },
                         function(newValue, oldValue) {
-                            if ( newValue !== oldValue ) {
-                                createMap($scope);
-                            }
+													// console.log(newValue);
+													// console.log(oldValue);
+                          //   if ( newValue !== oldValue ) {
+                          //       createMap($scope);
+                          //   }
+													createMap($scope);
                         }
                     );
                 } else {
