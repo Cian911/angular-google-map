@@ -153,7 +153,7 @@
                 zoomControl: '=',
                 zoomControlOptions: '='
             },
-            template: '<div id="{{ templateId }}" class="{{ customCss }}" style="{{ height }}"></div>',
+            template: '<div id="{{ templateId }}" class="map-common-components {{ customCss }}" style="{{ height }}"></div>',
             link: function($scope, element, attributes){
                 if($scope.customCss === undefined){
                     $scope.height = "height: 540px;";
