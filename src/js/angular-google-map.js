@@ -156,7 +156,7 @@
             template: '<div id="{{ templateId }}" class="map-common-components {{ customCss }}" style="{{ height }}"></div>',
             link: function($scope, element, attributes){
                 if($scope.customCss === undefined){
-                    $scope.height = "height: 540px;";
+                    $scope.height = "height: 480px;";
                 }
 
                 if($scope.apikey !== undefined){
