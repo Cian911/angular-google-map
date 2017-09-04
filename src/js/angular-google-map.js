@@ -156,7 +156,7 @@
             template: '<div id="{{ templateId }}" class="{{ customCss }}" style="{{ height }}"></div>',
             link: function($scope, element, attributes){
                 if($scope.customCss === undefined){
-                    $scope.height = "height: 600px;";
+                    $scope.height = "height: 540px;";
                 }
 
                 if($scope.apikey !== undefined){
