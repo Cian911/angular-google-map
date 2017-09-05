@@ -3,9 +3,9 @@
 
 	angular
 		.module('angular-google-map-v2', [])
-        .factory('loadGoogleMapAPI', loadGoogleMapAPI)
-		.directive('googleMap', googleMap);
-
+		.directive('googleMap', googleMap)
+		.factory('loadGoogleMapAPI', loadGoogleMapAPI);
+		
     /** @ngInject */
     function loadGoogleMapAPI($window, $rootScope, $document){
 
