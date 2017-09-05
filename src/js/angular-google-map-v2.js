@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('angular-google-map', [])
+		.module('angular-google-map-v2', [])
         .factory('loadGoogleMapAPI', loadGoogleMapAPI)
 		.directive('googleMap', googleMap);
 
