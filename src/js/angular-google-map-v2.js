@@ -5,8 +5,9 @@
 		.module('angular-google-map-v2', [])
 		.directive('googleMap', googleMap)
 		.factory('loadGoogleMapAPI', loadGoogleMapAPI);
-		
+
     /** @ngInject */
+		loadGoogleMapAPI.$inject = ['$window', '$rootScope', '$document'];
     function loadGoogleMapAPI($window, $rootScope, $document){
 
         var loadGoogleMapAPIService = {
@@ -46,6 +47,7 @@
     }
 
 	/** @ngInject */
+	googleMap.$inject = ['loadGoogleMapAPI'];
 	function googleMap(loadGoogleMapAPI) {
 
         var generateMapID = function (number) {
