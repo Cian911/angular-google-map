@@ -34,12 +34,12 @@ gulp.task('connect', function () {
 // js task
 gulp.task('js', function() {
     return gulp.src([
-        'src/js/angular-google-map.js'
+        'src/js/angular-google-map-v2.js'
     ])
     .pipe(plumber({
         errorHandler: onError
     }))
-    .pipe(concat('angular-google-map.min.js'))
+    .pipe(concat('angular-google-map-v2.min.js'))
     .pipe(ngAnnotate({ add: true }))
     .pipe(uglify({ mangle: true }))
     .pipe(gulp.dest('dist/'))

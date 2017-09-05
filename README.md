@@ -9,10 +9,10 @@ Custom fork of this project to fix the directive name and add Google Marker icon
 Via NPM
 
 ```
-$ npm install --save angular-google-map
+$ npm install --save angular-google-map-v2
 ```
 
-or the simple way, by including ``/dist/angular-google-map.min.js`` into the head of your HTML.
+or the simple way, by including ``/dist/angular-google-map-v2.min.js`` into the head of your HTML.
 
 
 ## Usage
@@ -23,7 +23,7 @@ Follow these steps to get it working in your project. In ```src``` you can see a
 You can add the module as a dependency after declaring your own module, like so:
 ```
 angular
-    .module('myApp', ['angular-google-map'])
+    .module('myApp', ['angular-google-map-v2'])
     .config(config)
     .run(run);
 ```
